@@ -2,7 +2,7 @@
 #
 # https://filebin.net/5v98x8nprxu5fqpu/gpl-3.0.txt
 
-#' @importFrom httr write_disk add_headers
+#' @importFrom httr write_disk add_headers upload_file content
 #' @importFrom tibble as_tibble
 #' @importFrom janitor clean_names
 #' @import dplyr
