@@ -59,7 +59,51 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-Filebin implements convenient file sharing on the web.
+<div id="filebin-" class="section level1">
+<div class="page-header"><h1 class="hasAnchor">
+<a href="#filebin-" class="anchor"></a>{filebin} <img src="reference/figures/filebin-hex.png" align="right" alt="" width="120">
+</h1></div>
+<!-- badges: start -->
+
+<p>A R wrapper for the <a href="https://filebin.net/">Filebin</a> API.</p>
+<div id="endpoints" class="section level2">
+<h2 class="hasAnchor">
+<a href="#endpoints" class="anchor"></a>Endpoints</h2>
+<p>File endpoints:</p>
+<ul>
+<li>
+<input type="checkbox" disabled checked><code>GET /{bin}/{filename}</code>
+</li>
+<li>
+<input type="checkbox" disabled><code>DELETE /{bin}/{filename}</code>
+</li>
+<li>
+<input type="checkbox" disabled checked><code>POST /{bin}/{filename}</code>
+</li>
+</ul>
+<p>Bin endpoints:</p>
+<ul>
+<li>
+<input type="checkbox" disabled><code>GET /{bin}</code>
+</li>
+<li>
+<input type="checkbox" disabled><code>PUT /{bin}</code>
+</li>
+<li>
+<input type="checkbox" disabled><code>DELETE /{bin}</code>
+</li>
+<li>
+<input type="checkbox" disabled><code>GET /qr/{bin}</code>
+</li>
+<li>
+<input type="checkbox" disabled><code>GET /archive/{bin}/tar</code>
+</li>
+<li>
+<input type="checkbox" disabled><code>GET /archive/{bin}/zip</code>
+</li>
+</ul>
+</div>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -76,7 +120,15 @@ Filebin implements convenient file sharing on the web.
 </ul>
 </div>
 
-  </div>
+  <div class="dev-status">
+<h2>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://cran.r-project.org/package=filebin"><img src="https://www.r-pkg.org/badges/version/filebin" alt="CRAN status"></a></li>
+<li><a href="https://codecov.io/github/datawookie/filebin"><img src="https://img.shields.io/codecov/c/github/datawookie/filebin.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
+</ul>
+</div>
+</div>
 </div>
 
 
