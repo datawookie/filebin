@@ -1,0 +1,24 @@
+Package: filebin
+Type: Package
+Title: Wrapper for the Filebin file sharing API
+Version: 0.0.01
+Authors@R: 
+    c(person(given = c("Andrew", "B."),
+             family = "Collier",
+             role = c("aut", "cre", "cph"),
+             email = "andrew@fathomdata.dev"))
+Description: Filebin implements convenient file sharing on the web.
+License: GPL-3
+Language: en-GB
+Encoding: UTF-8
+LazyData: true
+Imports:
+    dplyr,
+    httr,
+    janitor,
+    purrr,
+    tibble,
+    tidyr
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

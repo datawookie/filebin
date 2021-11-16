@@ -1,0 +1,20 @@
+# {filebin}
+
+A R wrapper for the [Filebin](https://filebin.net/) API.
+
+## Endpoints
+
+File endpoints:
+
+- [X] `GET /{bin}/{filename}`
+- [ ] `DELETE /{bin}/{filename}`
+- [X] `POST /{bin}/{filename}`
+
+Bin endpoints:
+
+- [ ] `GET /{bin}`
+- [ ] `PUT /{bin}`
+- [ ] `DELETE /{bin}`
+- [ ] `GET /qr/{bin}`
+- [ ] `GET /archive/{bin}/tar`
+- [ ] `GET /archive/{bin}/zip`
