@@ -12,7 +12,7 @@ post(path, bin = NA)
 \item{bin}{Bin name. If \code{NA} the generate random bin name.}
 }
 \value{
-
+A tibble.
 }
 \description{
 Upload a file to a bin

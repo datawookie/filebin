@@ -3,7 +3,7 @@
 #' @param path Path to a file. If a vector then upload multiple files.
 #' @param bin Bin name. If \code{NA} the generate random bin name.
 #'
-#' @return
+#' @return A tibble.
 #' @export
 #'
 #' @examples

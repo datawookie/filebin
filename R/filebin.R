@@ -5,8 +5,16 @@
 #' @importFrom httr write_disk add_headers upload_file content
 #' @importFrom tibble as_tibble
 #' @importFrom janitor clean_names
+#' @importFrom stringi stri_rand_strings
 #' @import dplyr
 #' @import purrr
 #' @import tidyr
 
 BASE_URL <- "https://filebin.net"
+
+globalVariables(
+  c(
+    "bin_id",
+    "bytes_readable"
+  )
+)

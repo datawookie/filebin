@@ -17,6 +17,7 @@ Imports:
     httr,
     janitor,
     purrr,
+    stringi,
     tibble,
     tidyr
 Suggests: 
