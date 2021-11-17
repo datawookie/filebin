@@ -13,7 +13,13 @@ coverage](https://img.shields.io/codecov/c/github/datawookie/filebin.svg)](https
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 <!-- badges: end -->
 
-A R wrapper for the [Filebin](https://filebin.net/) API.
+[Filebin](https://filebin.net/) allows you to quickly & easily share
+files. Development of the software behind Filebin happens here:
+
+-   <https://github.com/espebra/filebin2> (current) and
+-   <https://github.com/espebra/filebin> (deprecated).
+
+This is an R wrapper for the [Filebin API](https://filebin.net/api).
 
 ## Endpoints
 

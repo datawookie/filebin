@@ -5,3 +5,9 @@ bin_name_random <- function(length = 16, pattern = "[a-z0-9]") {
 bin_name_check <- function(bin) {
   if (nchar(bin) < 8) stop("Bin name too short.")
 }
+
+http_check_status <- function(response) {
+  if (http_error(response)) {
+    stop(http_status(response)$reason, call. = FALSE)
+  }
+}

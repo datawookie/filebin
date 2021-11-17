@@ -7,15 +7,21 @@
 #' @export
 #'
 #' @examples
+#' # Create some sample data.
+#' library(stringi)
+#'
+#' cat(stri_rand_lipsum(3), sep = "\n\n", file = "lorem-ipsum.txt")
+#' cat(stri_rand_lipsum(7), sep = "\n\n", file = "ipsum-lorem.txt")
+#'
 #' # Upload a single file.
-#' post("/etc/passwd")
+#' post("lorem-ipsum.txt")
 #' # Upload multiple files.
-#' post(c("/etc/passwd", "/etc/group"))
+#' post(c("lorem-ipsum.txt", "ipsum-lorem.txt"))
 #' # Upload to a specific bin.
-#' post("/etc/passwd", "examples")
+#' post("lorem-ipsum.txt", "placeholder")
 #'
 #' # To get details of the HTTP request.
-#' httr::with_verbose(post("/etc/passwd"))
+#' httr::with_verbose(post("lorem-ipsum.txt"))
 post <- function(path, bin = NA) {
   if (is.na(bin)) bin <- bin_name_random()
   bin_name_check(bin)

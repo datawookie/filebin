@@ -1,7 +1,7 @@
 Package: filebin
 Type: Package
-Title: Wrapper for the Filebin file sharing API
-Version: 0.0.01
+Title: Wrapper for the Filebin File Sharing API
+Version: 0.0.1
 Authors@R: 
     c(person(given = c("Andrew", "B."),
              family = "Collier",
