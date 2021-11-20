@@ -27,7 +27,7 @@ file_post <- function(path, bin = NA) {
   bin_name_check(bin)
 
   if (length(path) > 1) {
-    map_dfr(path, post, bin)
+    map_dfr(path, file_post, bin)
   } else {
     filename <- basename(path)
     url <- file.path(BASE_URL, bin, filename)

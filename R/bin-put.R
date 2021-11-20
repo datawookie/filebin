@@ -11,7 +11,12 @@
 #' @examples
 #' bin_get("placeholder")
 bin_lock <- function(bin) {
-  url <- file.path(BASE_URL, bin)
+  if (is.url(bin)) {
+    log_debug("Treating bin as an URL.")
+    url <- bin
+  } else {
+    url <- file.path(BASE_URL, bin)
+  }
 
   response <- httr::PUT(
     url,

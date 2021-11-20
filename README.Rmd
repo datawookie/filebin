@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE, comment=NA)
 
 This is an R wrapper for the [Filebin API](https://filebin.net/api).
 
-## Endpoints
+## API Endpoints
 
 File endpoints:
 
@@ -36,5 +36,5 @@ Bin endpoints:
 - [X] `PUT /{bin}`
 - [X] `DELETE /{bin}`
 - [X] `GET /qr/{bin}`
-- [ ] `GET /archive/{bin}/tar`
-- [ ] `GET /archive/{bin}/zip`
+- [X] `GET /archive/{bin}/tar`
+- [X] `GET /archive/{bin}/zip`

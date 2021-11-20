@@ -2,8 +2,12 @@ library(stringi)
 library(httr)
 
 BIN <- bin_name_random()
+BIN_LOCK <- bin_name_random()
 PNG <- tempfile(fileext = ".png")
+QRCODE <- tempfile(fileext = ".png")
 TXT <- tempfile(fileext = ".txt")
+TAR <- tempfile(fileext = ".tar")
+TXT_COPY <- tempfile(fileext = ".txt")
 FILE <- basename(TXT)
 
 SCRATCH <- tempfile(fileext = ".txt")
@@ -13,6 +17,7 @@ LOREM_IPSUM <- paste(stringi::stri_rand_lipsum(3), collapse = "\n\n")
 # Dump some Lorem Ipsum to TXT.
 #
 cat(LOREM_IPSUM, file = TXT)
+file.copy(TXT, TXT_COPY)
 
 png(PNG)
 plot(1:10)

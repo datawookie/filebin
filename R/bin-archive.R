@@ -11,6 +11,10 @@
 bin_archive <- function(bin, format = "zip", file = NA) {
   stopifnot(format %in% c("zip", "tar"))
 
+  if (is.url(bin)) {
+    bin <- sub("/.*$", "", parse_url(bin)$path)
+  }
+
   url <- file.path(BASE_URL, "archive", bin, format)
 
   response <- httr::GET(
@@ -23,4 +27,6 @@ bin_archive <- function(bin, format = "zip", file = NA) {
   }
 
   writeBin(content(response, as = "raw"), file)
+
+  file
 }

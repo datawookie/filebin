@@ -21,7 +21,7 @@ files. Development of the software behind Filebin happens here:
 
 This is an R wrapper for the [Filebin API](https://filebin.net/api).
 
-## Endpoints
+## API Endpoints
 
 File endpoints:
 
@@ -35,5 +35,5 @@ Bin endpoints:
 -   [x] `PUT /{bin}`
 -   [x] `DELETE /{bin}`
 -   [x] `GET /qr/{bin}`
--   [ ] `GET /archive/{bin}/tar`
--   [ ] `GET /archive/{bin}/zip`
+-   [x] `GET /archive/{bin}/tar`
+-   [x] `GET /archive/{bin}/zip`

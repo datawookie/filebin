@@ -18,7 +18,7 @@ file_get <- function(filename, bin, file = NA, overwrite = FALSE) {
     url <- filename
 
     if (is.na(file)) {
-      file <- basename(parse_url("https://filebin.net/cetz943klglqszpn/file190c032f0739da.txt")$path)
+      file <- basename(parse_url(url)$path)
     }
   } else {
     url <- file.path(BASE_URL, bin, filename)

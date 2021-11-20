@@ -16,8 +16,10 @@ bin_qr_code <- function(bin, file = NA) {
   )
 
   if (is.na(file)) {
-    file <- paste0(bin, ".png")
+    file <- paste0(bin, ".png")                                 # nocov
   }
 
   writeBin(content(response, as = "raw"), file)
+
+  file
 }
