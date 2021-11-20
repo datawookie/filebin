@@ -14,15 +14,15 @@
 #' cat(stri_rand_lipsum(7), sep = "\n\n", file = "ipsum-lorem.txt")
 #'
 #' # Upload a single file.
-#' filebin_post("lorem-ipsum.txt")
+#' file_post("lorem-ipsum.txt")
 #' # Upload multiple files.
-#' filebin_post(c("lorem-ipsum.txt", "ipsum-lorem.txt"))
+#' file_post(c("lorem-ipsum.txt", "ipsum-lorem.txt"))
 #' # Upload to a specific bin.
-#' filebin_post("lorem-ipsum.txt", "placeholder")
+#' file_post("lorem-ipsum.txt", "placeholder")
 #'
 #' # To get details of the HTTP request.
-#' httr::with_verbose(filebin_post("lorem-ipsum.txt"))
-filebin_post <- function(path, bin = NA) {
+#' httr::with_verbose(file_post("lorem-ipsum.txt"))
+file_post <- function(path, bin = NA) {
   if (is.na(bin)) bin <- bin_name_random()
   bin_name_check(bin)
 

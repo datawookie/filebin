@@ -16,12 +16,12 @@ Imports:
     dplyr,
     httr,
     janitor,
+    logger,
     purrr,
     stringi,
     tibble,
     tidyr
 Suggests: 
-    logger,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 RoxygenNote: 7.1.2

@@ -1,1 +1,1 @@
-unlink(TXT)
+unlink(c(basename(PATH), SCRATCH, LOREM_IPSUM))

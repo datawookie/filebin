@@ -1,18 +1,18 @@
 #' Retrieve a file from Filebin
 #'
-#' @inheritParams filebin_post
+#' @inheritParams file_post
 #' @param filename File name or URL.
 #' @param file File name to use to save results. If \code{FALSE} then don't save
 #'   to file.
 #' @param overwrite	Whether to overwrite existing file.
 #'
-#' @return
+#' @return Contents of file.
 #' @export
 #'
 #' @examples
-#' filebin_get("lorem-ipsum.txt", "placeholder")
-#' filebin_get("https://filebin.net/placeholder/lorem-ipsum.txt")
-filebin_get <- function(filename, bin, file = NA, overwrite = FALSE) {
+#' file_get("lorem-ipsum.txt", "placeholder")
+#' file_get("https://filebin.net/placeholder/lorem-ipsum.txt")
+file_get <- function(filename, bin, file = NA, overwrite = FALSE) {
   if (is.url(filename)) {
     log_debug("Treating filename as an URL.")
     url <- filename
