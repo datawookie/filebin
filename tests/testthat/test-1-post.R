@@ -1,5 +1,5 @@
 test_that("post file", {
-  binfile <- post(PATH, BIN)
+  binfile <- filebin_post(PATH, BIN)
 
   expect_type(binfile, "list")
   expect_equal(binfile$bin, BIN)

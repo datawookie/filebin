@@ -26,7 +26,7 @@ This is an R wrapper for the [Filebin API](https://filebin.net/api).
 File endpoints:
 
 -   [x] `GET /{bin}/{filename}`
--   [ ] `DELETE /{bin}/{filename}`
+-   [x] `DELETE /{bin}/{filename}`
 -   [x] `POST /{bin}/{filename}`
 
 Bin endpoints:
