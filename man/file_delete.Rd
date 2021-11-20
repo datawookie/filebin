@@ -2,9 +2,9 @@
 % Please edit documentation in R/file-delete.R
 \name{file_delete}
 \alias{file_delete}
-\title{Retrieve a file from Filebin}
+\title{Delete a file from Filebin}
 \usage{
-file_delete(filename, bin, file = NA, overwrite = FALSE)
+file_delete(filename, bin)
 }
 \arguments{
 \item{filename}{File name or URL.}
@@ -15,7 +15,7 @@ file_delete(filename, bin, file = NA, overwrite = FALSE)
 A Boolean indicating whether file was successfully deleted.
 }
 \description{
-Retrieve a file from Filebin
+Delete a file from Filebin
 }
 \examples{
 file_delete("lorem-ipsum.txt", "placeholder")

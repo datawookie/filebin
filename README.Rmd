@@ -34,7 +34,7 @@ Bin endpoints:
 
 - [X] `GET /{bin}`
 - [X] `PUT /{bin}`
-- [ ] `DELETE /{bin}`
+- [X] `DELETE /{bin}`
 - [ ] `GET /qr/{bin}`
 - [ ] `GET /archive/{bin}/tar`
 - [ ] `GET /archive/{bin}/zip`

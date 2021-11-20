@@ -1,4 +1,4 @@
-#' Retrieve a file from Filebin
+#' Delete a file from Filebin
 #'
 #' @inheritParams file_post
 #' @param filename File name or URL.
@@ -9,7 +9,7 @@
 #' @examples
 #' file_delete("lorem-ipsum.txt", "placeholder")
 #' file_delete("https://filebin.net/placeholder/lorem-ipsum.txt")
-file_delete <- function(filename, bin, file = NA, overwrite = FALSE) {
+file_delete <- function(filename, bin) {
   if (is.url(filename)) {
     log_debug("Treating filename as an URL.")
     url <- filename
