@@ -26,7 +26,7 @@ file_get <- function(filename, bin, file = NA, overwrite = FALSE) {
     if (is.na(file)) file <- filename
   }
 
-  args <- list(url)
+  args <- list(url, accept_json())
   if (!is.logical(file)) {
     args <- c(args, list(write_disk(file, overwrite = overwrite)))
   }

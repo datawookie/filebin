@@ -31,7 +31,7 @@ File endpoints:
 
 Bin endpoints:
 
--   [ ] `GET /{bin}`
+-   [x] `GET /{bin}`
 -   [ ] `PUT /{bin}`
 -   [ ] `DELETE /{bin}`
 -   [ ] `GET /qr/{bin}`

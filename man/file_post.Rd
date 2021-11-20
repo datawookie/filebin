@@ -19,10 +19,6 @@ Upload a file to Filebin
 }
 \examples{
 # Create some sample data.
-library(stringi)
-
-cat(stri_rand_lipsum(3), sep = "\n\n", file = "lorem-ipsum.txt")
-cat(stri_rand_lipsum(7), sep = "\n\n", file = "ipsum-lorem.txt")
 
 # Upload a single file.
 file_post("lorem-ipsum.txt")

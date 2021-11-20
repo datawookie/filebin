@@ -15,3 +15,14 @@ http_check_status <- function(response) {
 is.url <- function(x) {
   grepl("https?://", x, ignore.case = TRUE)
 }
+
+drop_cruft <- function(.data) {
+  .data %>%
+    select(
+      -starts_with("bin_"),
+      -ends_with("_at_relative"),
+      -bytes_readable
+    ) %>%
+    clean_names() %>%
+    rename_at(vars(ends_with("_at")), ~ sub("_at$", "", .))
+}

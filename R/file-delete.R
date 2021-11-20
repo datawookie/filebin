@@ -17,7 +17,7 @@ file_delete <- function(filename, bin, file = NA, overwrite = FALSE) {
     url <- file.path(BASE_URL, bin, filename)
   }
 
-  response <- httr::DELETE(url)
+  response <- httr::DELETE(url, accept_json())
 
   if (status_code(response) == 200) {
     TRUE

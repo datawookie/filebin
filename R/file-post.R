@@ -8,10 +8,10 @@
 #'
 #' @examples
 #' # Create some sample data.
-#' library(stringi)
-#'
-#' cat(stri_rand_lipsum(3), sep = "\n\n", file = "lorem-ipsum.txt")
-#' cat(stri_rand_lipsum(7), sep = "\n\n", file = "ipsum-lorem.txt")
+# library(stringi)
+#
+# cat(stri_rand_lipsum(3), sep = "\n\n", file = "lorem-ipsum.txt")
+# cat(stri_rand_lipsum(7), sep = "\n\n", file = "ipsum-lorem.txt")
 #'
 #' # Upload a single file.
 #' file_post("lorem-ipsum.txt")
@@ -40,7 +40,8 @@ file_post <- function(path, bin = NA) {
     response <- httr::POST(
       url,
       headers,
-      body = upload_file(path)
+      body = upload_file(path),
+      accept_json()
     )
 
     content(response) %>%
@@ -57,11 +58,6 @@ file_post <- function(path, bin = NA) {
         bin = bin_id,
         filename,
         everything()) %>%
-      select(
-        -starts_with("bin_"),
-        -ends_with("_at_relative"),
-        -bytes_readable
-      ) %>%
-      rename_at(vars(ends_with("_at")), ~ sub("_at$", "", .))
+      drop_cruft()
   }
 }
