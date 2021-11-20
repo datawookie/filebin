@@ -1,4 +1,4 @@
-#' Upload a file to a bin
+#' Upload a file to Filebin
 #'
 #' @param path Path to a file. If a vector then upload multiple files.
 #' @param bin Bin name. If \code{NA} the generate random bin name.

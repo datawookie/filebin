@@ -11,3 +11,7 @@ http_check_status <- function(response) {
     stop(http_status(response)$reason, call. = FALSE)
   }
 }
+
+is.url <- function(x) {
+  grepl("https?://", x, ignore.case = TRUE)
+}

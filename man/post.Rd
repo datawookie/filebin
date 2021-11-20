@@ -2,7 +2,7 @@
 % Please edit documentation in R/file-post.R
 \name{post}
 \alias{post}
-\title{Upload a file to a bin}
+\title{Upload a file to Filebin}
 \usage{
 post(path, bin = NA)
 }
@@ -15,7 +15,7 @@ post(path, bin = NA)
 A tibble.
 }
 \description{
-Upload a file to a bin
+Upload a file to Filebin
 }
 \examples{
 # Create some sample data.

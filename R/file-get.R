@@ -1,8 +1,37 @@
-get <- function(filename, bin) {
-  url <- file.path(BASE_URL, bin, filename)
+#' Retrieve a file from Filebin
+#'
+#' @inheritParams post
+#' @param filename File name or URL.
+#' @param file File name to use to save results. If \code{FALSE} then don't save
+#'   to file.
+#' @param overwrite	Whether to overwrite existing file.
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' get("lorem-ipsum.txt", "placeholder")
+#' get("https://filebin.net/placeholder/lorem-ipsum.txt")
+get <- function(filename, bin, file = NA, overwrite = FALSE) {
+  if (is.url(filename)) {
+    log_debug("Treating filename as an URL.")
+    url <- filename
 
-  response <- httr::GET(
-    url,
-    write_disk(filename)
-  )
+    if (is.na(file)) {
+      file <- basename(parse_url("https://filebin.net/cetz943klglqszpn/file190c032f0739da.txt")$path)
+    }
+  } else {
+    url <- file.path(BASE_URL, bin, filename)
+
+    if (is.na(file)) file <- filename
+  }
+
+  args <- list(url)
+  if (!is.logical(file)) {
+    args <- c(args, list(write_disk(file, overwrite = overwrite)))
+  }
+
+  response <- do.call(httr::GET, args)
+
+  content(response)
 }
