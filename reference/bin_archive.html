@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • filebin</title>
+<title>Get QR code for bin on Filebin — bin_archive • filebin</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Get QR code for bin on Filebin — bin_archive" />
+<meta property="og:description" content="Get QR code for bin on Filebin" />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -100,84 +101,43 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Get QR code for bin on Filebin</h1>
+    
+    <div class="hidden name"><code>bin_archive.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Get QR code for bin on Filebin</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>bin_archive</span><span class='op'>(</span><span class='va'>bin</span>, format <span class='op'>=</span> <span class='st'>"zip"</span>, file <span class='op'>=</span> <span class='cn'>NA</span><span class='op'>)</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="bin_archive.html">bin_archive()</a></code> </p>
-        </td>
-        <td><p>Get QR code for bin on Filebin</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="bin_delete.html">bin_delete()</a></code> </p>
-        </td>
-        <td><p>Delete a bin from Filebin</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="bin_get.html">bin_get()</a></code> </p>
-        </td>
-        <td><p>Retrieve a bin from Filebin</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="bin_lock.html">bin_lock()</a></code> </p>
-        </td>
-        <td><p>Lock a bin on Filebin</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="bin_qr_code.html">bin_qr_code()</a></code> </p>
-        </td>
-        <td><p>Get QR code for bin on Filebin</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="file_delete.html">file_delete()</a></code> </p>
-        </td>
-        <td><p>Delete a file from Filebin</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="file_get.html">file_get()</a></code> </p>
-        </td>
-        <td><p>Retrieve a file from Filebin</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="file_post.html">file_post()</a></code> </p>
-        </td>
-        <td><p>Upload a file to Filebin</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>bin</th>
+      <td><p>Bin name. If <code>NA</code> the generate random bin name.</p></td>
+    </tr>
+    <tr>
+      <th>format</th>
+      <td><p>Archive format. Either <code>"zip"</code> (default) or <code>"tar"</code>.</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    
+
+
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><span class='r-in'><span class='fu'>bin_archive</span><span class='op'>(</span><span class='st'>"placeholder"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "placeholder.zip"</span>
+</pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
