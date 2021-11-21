@@ -12,7 +12,7 @@ FILE <- basename(TXT)
 
 SCRATCH <- tempfile(fileext = ".txt")
 
-LOREM_IPSUM <- paste(stringi::stri_rand_lipsum(3), collapse = "\n\n")
+LOREM_IPSUM <- stri_trim(stri_rand_lipsum(1))
 
 # Dump some Lorem Ipsum to TXT.
 #
