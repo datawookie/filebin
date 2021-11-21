@@ -7,7 +7,8 @@ Authors@R:
              family = "Collier",
              role = c("aut", "cre", "cph"),
              email = "andrew@fathomdata.dev"))
-Description: Filebin implements convenient file sharing on the web.
+Description: A wrapper for the Filebin API. Filebin implements convenient file
+    sharing on the web.
 License: GPL-3
 Language: en-GB
 Encoding: UTF-8
@@ -22,6 +23,7 @@ Imports:
     tibble,
     tidyr
 Suggests: 
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    withr
 Config/testthat/edition: 3
 RoxygenNote: 7.1.2

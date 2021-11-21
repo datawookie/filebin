@@ -1,7 +1,6 @@
 #' Delete a bin from Filebin
 #'
 #' @inheritParams file_post
-#' @param filename File name or URL.
 #'
 #' @return A Boolean indicating whether bin was successfully deleted.
 #' @export

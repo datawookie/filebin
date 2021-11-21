@@ -2,7 +2,8 @@
 #
 # https://filebin.net/5v98x8nprxu5fqpu/gpl-3.0.txt
 
-#' @importFrom httr write_disk add_headers upload_file content parse_url status_code accept_json
+#' @importFrom httr write_disk add_headers upload_file content parse_url
+#' @importFrom httr http_status http_error status_code accept_json
 #' @importFrom tibble as_tibble
 #' @importFrom janitor clean_names
 #' @importFrom stringi stri_rand_strings

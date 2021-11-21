@@ -3,3 +3,5 @@
 README.Rmd
 .github
 .bumpversion.cfg
+\.html$
+\.txt$

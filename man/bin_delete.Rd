@@ -8,8 +8,6 @@ bin_delete(bin)
 }
 \arguments{
 \item{bin}{Bin name. If \code{NA} the generate random bin name.}
-
-\item{filename}{File name or URL.}
 }
 \value{
 A Boolean indicating whether bin was successfully deleted.

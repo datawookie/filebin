@@ -1,4 +1,6 @@
 test_that("lock bin: bin", {
+  local_lorem_ipsum()
+
   file_post(TXT, BIN_LOCK)
 
   expect_true(bin_lock(BIN_LOCK))

@@ -1,11 +1,8 @@
 #' Retrieve a bin from Filebin
 #'
-#' @param filename File name or URL.
-#' @param file File name to use to save results. If \code{FALSE} then don't save
-#'   to file.
-#' @param overwrite	Whether to overwrite existing file.
+#' @inheritParams file_post
 #'
-#' @return
+#' @return A tibble.
 #' @export
 #'
 #' @examples

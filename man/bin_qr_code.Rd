@@ -8,9 +8,11 @@ bin_qr_code(bin, file = NA)
 }
 \arguments{
 \item{bin}{Bin name. If \code{NA} the generate random bin name.}
+
+\item{file}{File name to use to save results.}
 }
 \value{
-
+File name of the archive.
 }
 \description{
 Get QR code for bin on Filebin

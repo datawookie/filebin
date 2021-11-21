@@ -1,8 +1,9 @@
 #' Get QR code for bin on Filebin
 #'
 #' @inheritParams file_post
+#' @inheritParams bin_archive
 #'
-#' @return
+#' @return File name of the archive.
 #' @export
 #'
 #' @examples

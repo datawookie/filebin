@@ -22,3 +22,22 @@ file.copy(TXT, TXT_COPY)
 png(PNG)
 plot(1:10)
 dev.off()
+
+local_lorem_ipsum <- function(env = parent.frame()) {
+  # withr::defer(unlink(TXT), env)
+}
+
+withr::defer(
+  {
+    unlink(
+      c(
+        basename(TXT),
+        PNG,
+        SCRATCH,
+        LOREM_IPSUM,
+        list.files(pattern = "*.zip")
+      )
+    )
+  },
+  teardown_env()
+)

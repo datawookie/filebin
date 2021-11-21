@@ -19,14 +19,23 @@ Upload a file to Filebin
 }
 \examples{
 # Create some sample data.
+library(stringi)
+
+lorem_ipsum <- tempfile(fileext = ".txt")
+ipsum_lorem <- tempfile(fileext = ".txt")
+
+cat(stri_rand_lipsum(3), sep = "\n\n", file = lorem_ipsum)
+cat(stri_rand_lipsum(7), sep = "\n\n", file = ipsum_lorem)
 
 # Upload a single file.
-file_post("lorem-ipsum.txt")
+file_post(lorem_ipsum)
 # Upload multiple files.
-file_post(c("lorem-ipsum.txt", "ipsum-lorem.txt"))
+file_post(c(lorem_ipsum, ipsum_lorem))
+
 # Upload to a specific bin.
-file_post("lorem-ipsum.txt", "placeholder")
+bin <- bin_name_random()
+file_post(lorem_ipsum, bin)
 
 # To get details of the HTTP request.
-httr::with_verbose(file_post("lorem-ipsum.txt"))
+httr::with_verbose(file_post(lorem_ipsum))
 }

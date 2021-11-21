@@ -7,15 +7,10 @@
 bin_get(bin)
 }
 \arguments{
-\item{filename}{File name or URL.}
-
-\item{file}{File name to use to save results. If \code{FALSE} then don't save
-to file.}
-
-\item{overwrite}{Whether to overwrite existing file.}
+\item{bin}{Bin name. If \code{NA} the generate random bin name.}
 }
 \value{
-
+A tibble.
 }
 \description{
 Retrieve a bin from Filebin

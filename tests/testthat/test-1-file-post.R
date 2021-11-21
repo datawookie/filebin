@@ -1,4 +1,6 @@
 test_that("post file (with bin)", {
+  local_lorem_ipsum()
+
   txtfile <- file_post(TXT, BIN)
   pngfile <- file_post(PNG, BIN)
 
@@ -8,6 +10,8 @@ test_that("post file (with bin)", {
 })
 
 test_that("post file (without bin)", {
+  local_lorem_ipsum()
+
   txtfile <- file_post(TXT)
 
   expect_type(txtfile, "list")
@@ -15,6 +19,8 @@ test_that("post file (without bin)", {
 })
 
 test_that("post multiple files", {
+  local_lorem_ipsum()
+
   files <- file_post(c(TXT, PNG), BIN)
 
   expect_type(files, "list")

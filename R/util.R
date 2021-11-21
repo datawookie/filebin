@@ -1,3 +1,13 @@
+#' Create random bin name for Filebin
+#'
+#' @param length Number of characters in bin name. Must be 8 or more.
+#' @param pattern Character set.
+#'
+#' @return A character vector.
+#' @export
+#'
+#' @examples
+#' bin_name_random(8)
 bin_name_random <- function(length = 16, pattern = "[a-z0-9]") {
   stri_rand_strings(1, length, pattern)
 }
