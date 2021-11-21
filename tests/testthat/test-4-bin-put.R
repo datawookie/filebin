@@ -5,6 +5,7 @@ test_that("lock bin: bin", {
 
   expect_true(bin_lock(BIN_LOCK))
   expect_false(file_delete(TXT, BIN_LOCK))
+  expect_error(file_post(TXT, BIN_LOCK))
 })
 
 test_that("lock bin: URL", {
