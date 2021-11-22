@@ -4,6 +4,11 @@ output: github_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, comment=NA)
+
+library(dplyr)
+library(tools)
+
+suppressWarnings(file.remove("description.txt"))
 ```
 
 # {filebin} <img src="man/figures/filebin-hex.png" align="right" alt="" width="120" />
@@ -21,6 +26,59 @@ knitr::opts_chunk$set(echo = TRUE, comment=NA)
 - <https://github.com/espebra/filebin> (deprecated).
 
 This is an R wrapper for the [Filebin API](https://filebin.net/api).
+
+## Installation
+
+Install the development version from GitHub as follows:
+
+```{r eval = FALSE}
+remotes::install_github("datawookie/filebin")
+```
+
+## Basic Usage
+
+Load the package and check the versions.
+
+```{r}
+library(filebin)
+
+packageVersion("filebin")
+```
+
+Upload a file to randomly named bin on Filebin.
+
+```{r}
+DESCRIPTION_PATH <- system.file("DESCRIPTION", package = "filebin")
+
+description <- file_post(DESCRIPTION_PATH)
+```
+
+Take a look at the result.
+
+```{r}
+description %>% select(url, filename, bin, md5)
+```
+
+Download a file using an URL.
+
+```{r}
+file_get(description$url, file = "description.txt")
+```
+
+Download a file using filename and bin.
+
+```{r}
+file_get(
+  description$filename,
+  description$bin,
+  file = "description.txt",
+  overwrite = TRUE
+)
+```
+
+```{r}
+md5sum(c("DESCRIPTION", "description.txt"))
+```
 
 ## API Endpoints
 
