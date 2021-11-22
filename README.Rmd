@@ -76,6 +76,8 @@ file_get(
 )
 ```
 
+Compare to original document.
+
 ```{r}
 md5sum(c("DESCRIPTION", "description.txt"))
 ```

@@ -45,5 +45,5 @@ file_get <- function(filename, bin, file = NA, overwrite = FALSE) {
 
   response <- do.call(httr::GET, args)
 
-  content(response)
+  invisible(content(response))
 }
