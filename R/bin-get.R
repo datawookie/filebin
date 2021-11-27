@@ -22,8 +22,10 @@ bin_get <- function(bin) {
 
   bin <- content(response)
 
-  bin$bin <- as_tibble(bin$bin)
-  bin$files <-  bind_rows(bin$files)
+  bin$bin <- as_tibble(bin$bin) %>%
+    drop_cruft()
+  bin$files <-  bind_rows(bin$files) %>%
+    drop_cruft()
 
   bin
 }
