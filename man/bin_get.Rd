@@ -16,5 +16,6 @@ A tibble.
 Retrieve a bin from Filebin
 }
 \examples{
-bin_get("placeholder")
+posted <- file_post(LOREM_IPSUM, bin = "latin-text")
+bin_get("latin-text")
 }

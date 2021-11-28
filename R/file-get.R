@@ -10,17 +10,11 @@
 #' @export
 #'
 #' @examples#'
-#' library(stringi)
-#'
-#' lorem_ipsum <- tempfile(fileext = ".txt")
-#' bin <- bin_name_random()
-#'
-#' cat(stri_rand_lipsum(3), sep = "\n\n", file = lorem_ipsum)
-#' file_post(lorem_ipsum, bin)
+#' posted <- file_post(LOREM_IPSUM, bin = "latin-text")
 #'
 #' # Discard path and just retain filename.
-#' filename <- basename(lorem_ipsum)
-#' file_get(filename, bin)
+#' filename <- basename(LOREM_IPSUM)
+#' file_get(filename, "latin-text")
 #'
 #' # Delete downloaded file.
 #' file.remove(filename)

@@ -18,6 +18,8 @@ A Boolean indicating whether file was successfully deleted.
 Delete a file from Filebin
 }
 \examples{
-file_delete("lorem-ipsum.txt", "placeholder")
-file_delete("https://filebin.net/placeholder/lorem-ipsum.txt")
+posted <- file_post(LOREM_IPSUM, bin = "latin-text")
+
+file_delete("lorem-ipsum.txt", "latin-text")
+file_delete("https://filebin.net/latin-text/lorem-ipsum.txt")
 }

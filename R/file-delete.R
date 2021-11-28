@@ -7,8 +7,10 @@
 #' @export
 #'
 #' @examples
-#' file_delete("lorem-ipsum.txt", "placeholder")
-#' file_delete("https://filebin.net/placeholder/lorem-ipsum.txt")
+#' posted <- file_post(LOREM_IPSUM, bin = "latin-text")
+#'
+#' file_delete("lorem-ipsum.txt", "latin-text")
+#' file_delete("https://filebin.net/latin-text/lorem-ipsum.txt")
 file_delete <- function(filename, bin) {
   if (is.url(filename)) {
     log_debug("Treating filename as an URL.")
