@@ -16,5 +16,6 @@ A Boolean.
 Lock a bin on Filebin
 }
 \examples{
-bin_get("placeholder")
+posted <- file_post(LOREM_IPSUM)
+bin_get(posted$bin)
 }

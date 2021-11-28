@@ -18,5 +18,6 @@ File name of the archive.
 Get QR code for bin on Filebin
 }
 \examples{
-bin_get("placeholder")
+posted <- file_post(LOREM_IPSUM, bin = "latin-text")
+bin_qr_code("latin-text", file = tempfile(fileext = ".png"))
 }

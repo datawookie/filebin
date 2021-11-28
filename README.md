@@ -39,7 +39,7 @@ library(filebin)
 packageVersion("filebin")
 ```
 
-    [1] '0.0.3'
+    [1] '0.0.4'
 
 Upload a file to randomly named bin on Filebin.
 
@@ -58,7 +58,7 @@ description %>% select(url, filename, bin)
     # A tibble: 1 × 3
       url                                              filename    bin             
       <chr>                                            <chr>       <chr>           
-    1 https://filebin.net/omvxg4ahks14njt3/DESCRIPTION DESCRIPTION omvxg4ahks14njt3
+    1 https://filebin.net/3s0wgwfjbiubnkpq/DESCRIPTION DESCRIPTION 3s0wgwfjbiubnkpq
 
 Download a file using an URL.
 
@@ -84,9 +84,9 @@ md5sum(c(DESCRIPTION_PATH, "description.txt"))
 ```
 
     /home/wookie/.R/x86_64-pc-linux-gnu-library/4.1/filebin/DESCRIPTION 
-                                     "309adc78a11610bed94eea2a42d195d0" 
+                                     "a0fc0f4d94e738394e18e78f17dfb510" 
                                                         description.txt 
-                                     "309adc78a11610bed94eea2a42d195d0" 
+                                     "a0fc0f4d94e738394e18e78f17dfb510" 
 
 The MD5 checksums are the same, as one would expect.
 

@@ -99,3 +99,7 @@ Bin endpoints:
 - [X] `GET /qr/{bin}`
 - [X] `GET /archive/{bin}/tar`
 - [X] `GET /archive/{bin}/zip`
+
+```{r include=FALSE}
+suppressWarnings(file.remove("description.txt"))
+```
