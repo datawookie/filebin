@@ -27,6 +27,8 @@ suppressWarnings(file.remove("description.txt"))
 
 This is an R wrapper for the [Filebin API](https://filebin.net/api).
 
+The documentation for `{filebin}` can be found [here](https://datawookie.github.io/filebin/).
+
 ## Installation
 
 Install the development version from GitHub as follows:

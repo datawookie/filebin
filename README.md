@@ -21,6 +21,9 @@ files. Development of the software behind Filebin happens here:
 
 This is an R wrapper for the [Filebin API](https://filebin.net/api).
 
+The documentation for `{filebin}` can be found
+[here](https://datawookie.github.io/filebin/).
+
 ## Installation
 
 Install the development version from GitHub as follows:
@@ -58,7 +61,7 @@ description %>% select(url, filename, bin)
     # A tibble: 1 × 3
       url                                              filename    bin             
       <chr>                                            <chr>       <chr>           
-    1 https://filebin.net/3s0wgwfjbiubnkpq/DESCRIPTION DESCRIPTION 3s0wgwfjbiubnkpq
+    1 https://filebin.net/4kwd1cphb0fvklc6/DESCRIPTION DESCRIPTION 4kwd1cphb0fvklc6
 
 Download a file using an URL.
 
