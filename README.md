@@ -61,7 +61,11 @@ description %>% select(url, filename, bin)
     # A tibble: 1 × 3
       url                                              filename    bin             
       <chr>                                            <chr>       <chr>           
+<<<<<<< HEAD
     1 https://filebin.net/4kwd1cphb0fvklc6/DESCRIPTION DESCRIPTION 4kwd1cphb0fvklc6
+=======
+    1 https://filebin.net/u5e361taf9cbcyk5/DESCRIPTION DESCRIPTION u5e361taf9cbcyk5
+>>>>>>> cc2dbe7... Bump version: 0.0.3 → 0.0.4
 
 Download a file using an URL.
 
