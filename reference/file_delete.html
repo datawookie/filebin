@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">filebin</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.4</span>
       </span>
     </div>
 
@@ -132,9 +132,11 @@
     <p>A Boolean indicating whether file was successfully deleted.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='r-in'><span class='fu'>file_delete</span><span class='op'>(</span><span class='st'>"lorem-ipsum.txt"</span>, <span class='st'>"placeholder"</span><span class='op'>)</span></span>
-<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] FALSE</span>
-<span class='r-in'><span class='fu'>file_delete</span><span class='op'>(</span><span class='st'>"https://filebin.net/placeholder/lorem-ipsum.txt"</span><span class='op'>)</span></span>
+    <pre class="examples"><span class='r-in'><span class='va'>posted</span> <span class='op'>&lt;-</span> <span class='fu'><a href='file_post.html'>file_post</a></span><span class='op'>(</span><span class='va'>LOREM_IPSUM</span>, bin <span class='op'>=</span> <span class='st'>"latin-text"</span><span class='op'>)</span></span>
+<span class='r-in'></span>
+<span class='r-in'><span class='fu'>file_delete</span><span class='op'>(</span><span class='st'>"lorem-ipsum.txt"</span>, <span class='st'>"latin-text"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] TRUE</span>
+<span class='r-in'><span class='fu'>file_delete</span><span class='op'>(</span><span class='st'>"https://filebin.net/latin-text/lorem-ipsum.txt"</span><span class='op'>)</span></span>
 <span class='r-out co'><span class='r-pr'>#&gt;</span> [1] FALSE</span>
 </pre>
   </div>
