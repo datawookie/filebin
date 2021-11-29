@@ -55,17 +55,13 @@ description <- file_post(DESCRIPTION_PATH)
 Take a look at the result.
 
 ``` r
-description %>% select(url, filename, bin)
+description %>% select(filename, bin)
 ```
 
-    # A tibble: 1 × 3
-      url                                              filename    bin             
-      <chr>                                            <chr>       <chr>           
-<<<<<<< HEAD
-    1 https://filebin.net/4kwd1cphb0fvklc6/DESCRIPTION DESCRIPTION 4kwd1cphb0fvklc6
-=======
-    1 https://filebin.net/u5e361taf9cbcyk5/DESCRIPTION DESCRIPTION u5e361taf9cbcyk5
->>>>>>> cc2dbe7... Bump version: 0.0.3 → 0.0.4
+    # A tibble: 1 × 2
+      filename    bin             
+      <chr>       <chr>           
+    1 DESCRIPTION 8dehf0ne5usdml20
 
 Download a file using an URL.
 
@@ -89,13 +85,6 @@ Compare to original document.
 ``` r
 md5sum(c(DESCRIPTION_PATH, "description.txt"))
 ```
-
-    /home/wookie/.R/x86_64-pc-linux-gnu-library/4.1/filebin/DESCRIPTION 
-                                     "a0fc0f4d94e738394e18e78f17dfb510" 
-                                                        description.txt 
-                                     "a0fc0f4d94e738394e18e78f17dfb510" 
-
-The MD5 checksums are the same, as one would expect.
 
 ## API Endpoints
 

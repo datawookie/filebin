@@ -58,7 +58,7 @@ description <- file_post(DESCRIPTION_PATH)
 Take a look at the result.
 
 ```{r}
-description %>% select(url, filename, bin)
+description %>% select(filename, bin)
 ```
 
 Download a file using an URL.
@@ -80,10 +80,9 @@ file_get(
 
 Compare to original document.
 
-```{r}
+```{r results="hide"}
 md5sum(c(DESCRIPTION_PATH, "description.txt"))
 ```
-The MD5 checksums are the same, as one would expect.
 
 ## API Endpoints
 
