@@ -42,7 +42,7 @@ library(filebin)
 packageVersion("filebin")
 ```
 
-    [1] '0.0.4'
+    [1] '0.0.5'
 
 Upload a file to randomly named bin on Filebin.
 
@@ -61,7 +61,7 @@ description %>% select(filename, bin)
     # A tibble: 1 × 2
       filename    bin             
       <chr>       <chr>           
-    1 DESCRIPTION 8dehf0ne5usdml20
+    1 DESCRIPTION 3hs9kme695vj8ou1
 
 Download a file using an URL.
 

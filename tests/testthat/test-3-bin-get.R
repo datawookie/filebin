@@ -7,7 +7,7 @@ test_that("get bin: bin", {
 })
 
 test_that("get bin: URL", {
-  url <- file.path(BASE_URL, BIN)
+  url <- file.path(base_url(), BIN)
 
   bin <- bin_get(url)
 

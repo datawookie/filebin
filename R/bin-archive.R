@@ -8,7 +8,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' bin_archive("placeholder", file = tempfile(fileext = ".zip"))
+#' }
 bin_archive <- function(bin, format = "zip", file = NA) {
   stopifnot(format %in% c("zip", "tar"))
 
@@ -16,7 +18,7 @@ bin_archive <- function(bin, format = "zip", file = NA) {
     bin <- sub("/.*$", "", parse_url(bin)$path)
   }
 
-  url <- file.path(BASE_URL, "archive", bin, format)
+  url <- file.path(base_url(), "archive", bin, format)
 
   response <- httr::GET(
     url,

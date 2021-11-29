@@ -3,6 +3,6 @@ test_that("delete bin", {
 })
 
 test_that("delete bin that doesn't exist", {
-  url <- file.path(BASE_URL, BIN)
+  url <- file.path(base_url(), BIN)
   expect_false(bin_delete(url))
 })

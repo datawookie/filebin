@@ -18,6 +18,7 @@ A tibble.
 Upload a file to Filebin
 }
 \examples{
+\dontrun{
 # Upload a single file.
 file_post(LOREM_IPSUM)
 # Upload multiple files.
@@ -29,4 +30,5 @@ file_post(LOREM_IPSUM, bin)
 
 # To get details of the HTTP request.
 httr::with_verbose(file_post(LOREM_IPSUM))
+}
 }

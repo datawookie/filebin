@@ -18,8 +18,10 @@ A Boolean indicating whether file was successfully deleted.
 Delete a file from Filebin
 }
 \examples{
+\dontrun{
 posted <- file_post(LOREM_IPSUM, bin = "latin-text")
 
 file_delete("lorem-ipsum.txt", "latin-text")
 file_delete("https://filebin.net/latin-text/lorem-ipsum.txt")
+}
 }

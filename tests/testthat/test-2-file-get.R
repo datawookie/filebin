@@ -5,7 +5,7 @@ test_that("get file: filename & bin", {
 })
 
 test_that("get file: URL", {
-  url <- file.path(BASE_URL, BIN, basename(TXT))
+  url <- file.path(base_url(), BIN, basename(TXT))
 
   lorem_ipsum <- file_get(url, overwrite = TRUE)
   # Overwrite with copy just in case something went wrong.

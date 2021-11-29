@@ -20,5 +20,7 @@ File name as character vector.
 Get contents of bin as archive
 }
 \examples{
+\dontrun{
 bin_archive("placeholder", file = tempfile(fileext = ".zip"))
+}
 }

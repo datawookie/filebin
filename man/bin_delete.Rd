@@ -16,6 +16,8 @@ A Boolean indicating whether bin was successfully deleted.
 Delete a bin from Filebin
 }
 \examples{
+\dontrun{
 bin_delete("placeholder")
 bin_delete("https://filebin.net/placeholder/")
+}
 }

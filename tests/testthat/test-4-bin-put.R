@@ -9,7 +9,7 @@ test_that("lock bin: bin", {
 })
 
 test_that("lock bin: URL", {
-  url <- file.path(BASE_URL, bin_name_random())
+  url <- file.path(base_url(), bin_name_random())
 
   expect_false(bin_lock(url))
 })

@@ -23,7 +23,7 @@ Contents of file.
 Retrieve a file from Filebin
 }
 \examples{
-#'
+\dontrun{
 posted <- file_post(LOREM_IPSUM, bin = "latin-text")
 
 # Discard path and just retain filename.
@@ -32,4 +32,5 @@ file_get(filename, "latin-text")
 
 # Delete downloaded file.
 file.remove(filename)
+}
 }

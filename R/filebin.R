@@ -12,7 +12,26 @@
 #' @import purrr
 #' @import tidyr
 
-BASE_URL <- "https://filebin.net"
+cache <- new.env()
+
+#' Set or query API base URL
+#'
+#' @param url Base URL.
+#'
+#' @return URL string.
+#' @export
+#'
+#' @examples
+#' base_url("https://testnet.binance.vision/")
+base_url <- function(url = NULL) {
+  if (!is.null(url)) {
+    log_debug("Setting base URL to {url}.")
+    assign("BASE_URL", url, envir = cache)
+  }
+  get("BASE_URL", envir = cache)
+}
+
+base_url("https://filebin.net")
 
 globalVariables(
   c(

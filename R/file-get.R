@@ -9,7 +9,8 @@
 #' @return Contents of file.
 #' @export
 #'
-#' @examples#'
+#' @examples
+#' \dontrun{
 #' posted <- file_post(LOREM_IPSUM, bin = "latin-text")
 #'
 #' # Discard path and just retain filename.
@@ -18,6 +19,7 @@
 #'
 #' # Delete downloaded file.
 #' file.remove(filename)
+#' }
 file_get <- function(filename, bin, file = NA, overwrite = FALSE) {
   if (is.url(filename)) {
     log_debug("Treating filename as an URL.")
@@ -27,7 +29,7 @@ file_get <- function(filename, bin, file = NA, overwrite = FALSE) {
       file <- basename(parse_url(url)$path)
     }
   } else {
-    url <- file.path(BASE_URL, bin, filename)
+    url <- file.path(base_url(), bin, filename)
 
     if (is.na(file)) file <- filename
   }

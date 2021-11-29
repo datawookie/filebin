@@ -2,6 +2,7 @@
 
 export(LOREM_IPSUM)
 export(MORE_LOREM_IPSUM)
+export(base_url)
 export(bin_archive)
 export(bin_delete)
 export(bin_get)

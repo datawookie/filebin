@@ -3,7 +3,7 @@ test_that("delete file: filename & bin", {
 })
 
 test_that("delete file: URL", {
-  url <- file.path(BASE_URL, BIN, basename(PNG))
+  url <- file.path(base_url(), BIN, basename(PNG))
   expect_true(file_delete(url))
 })
 

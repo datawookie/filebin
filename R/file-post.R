@@ -7,6 +7,7 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' # Upload a single file.
 #' file_post(LOREM_IPSUM)
 #' # Upload multiple files.
@@ -18,6 +19,7 @@
 #'
 #' # To get details of the HTTP request.
 #' httr::with_verbose(file_post(LOREM_IPSUM))
+#' }
 file_post <- function(path, bin = NA) {
   if (is.na(bin)) bin <- bin_name_random()
   bin_name_check(bin)
@@ -26,7 +28,7 @@ file_post <- function(path, bin = NA) {
     map_dfr(path, file_post, bin)
   } else {
     filename <- basename(path)
-    url <- file.path(BASE_URL, bin, filename)
+    url <- file.path(base_url(), bin, filename)
 
     headers = list(
       "content-type" = "application/octet-stream"

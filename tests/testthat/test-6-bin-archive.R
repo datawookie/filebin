@@ -1,5 +1,5 @@
 test_that("delete bin", {
-  url <- file.path(BASE_URL, BIN)
+  url <- file.path(base_url(), BIN)
 
   zipfile <- bin_archive(BIN, "zip")
   tarfile <- bin_archive(url, "tar", file = TAR)

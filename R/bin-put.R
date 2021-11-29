@@ -6,14 +6,16 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' posted <- file_post(LOREM_IPSUM)
 #' bin_get(posted$bin)
+#' }
 bin_lock <- function(bin) {
   if (is.url(bin)) {
     log_debug("Treating bin as an URL.")
     url <- bin
   } else {
-    url <- file.path(BASE_URL, bin)
+    url <- file.path(base_url(), bin)
   }
 
   response <- httr::PUT(

@@ -6,14 +6,16 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' bin_delete("placeholder")
 #' bin_delete("https://filebin.net/placeholder/")
+#' }
 bin_delete <- function(bin) {
   if (is.url(bin)) {
     log_debug("Treating bin as an URL.")
     url <- bin
   } else {
-    url <- file.path(BASE_URL, bin)
+    url <- file.path(base_url(), bin)
   }
 
   response <- httr::DELETE(url, accept_json())

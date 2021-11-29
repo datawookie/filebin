@@ -16,6 +16,8 @@ A tibble.
 Retrieve a bin from Filebin
 }
 \examples{
+\dontrun{
 posted <- file_post(LOREM_IPSUM)
 bin_get(posted$bin)
+}
 }

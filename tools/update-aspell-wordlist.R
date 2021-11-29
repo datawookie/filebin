@@ -8,4 +8,4 @@ words <- readLines(WORDLIST)
 
 dir.create(".aspell", showWarnings = FALSE)
 
-saveRDS(WORDLIST, file = file.path(".aspell", "filebin.rds"), version = 2)
+saveRDS(words, file = file.path(".aspell", "filebin.rds"), version = 2)

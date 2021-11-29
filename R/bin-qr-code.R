@@ -7,10 +7,12 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' posted <- file_post(LOREM_IPSUM, bin = "latin-text")
 #' bin_qr_code("latin-text", file = tempfile(fileext = ".png"))
+#' }
 bin_qr_code <- function(bin, file = NA) {
-  url <- file.path(BASE_URL, "qr", bin)
+  url <- file.path(base_url(), "qr", bin)
 
   response <- httr::GET(
     url,

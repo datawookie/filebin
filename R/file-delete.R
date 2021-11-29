@@ -7,16 +7,18 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' posted <- file_post(LOREM_IPSUM, bin = "latin-text")
 #'
 #' file_delete("lorem-ipsum.txt", "latin-text")
 #' file_delete("https://filebin.net/latin-text/lorem-ipsum.txt")
+#' }
 file_delete <- function(filename, bin) {
   if (is.url(filename)) {
     log_debug("Treating filename as an URL.")
     url <- filename
   } else {
-    url <- file.path(BASE_URL, bin, filename)
+    url <- file.path(base_url(), bin, filename)
   }
 
   response <- httr::DELETE(url, accept_json())
