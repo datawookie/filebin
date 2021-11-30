@@ -1,6 +1,8 @@
 library(stringi)
 library(httr)
 
+base_url("http://localhost:8080")
+
 BIN <- bin_name_random()
 BIN_LOCK <- bin_name_random()
 PNG <- tempfile(fileext = ".png")
@@ -22,10 +24,6 @@ file.copy(TXT, TXT_COPY)
 png(PNG)
 plot(1:10)
 dev.off()
-
-local_lorem_ipsum <- function(env = parent.frame()) {
-  # withr::defer(unlink(TXT), env)
-}
 
 withr::defer(
   {
