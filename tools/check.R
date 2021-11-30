@@ -4,7 +4,11 @@ devtools::check(cran = TRUE)
 
 # Incoming feasibility checks for CRAN.
 #
-devtools::check(remote = TRUE)
+devtools::check(
+  manual = TRUE,
+  remote = TRUE,
+  incoming = TRUE
+)
 
 # Check it on Windows.
 #

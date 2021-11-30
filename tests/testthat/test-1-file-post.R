@@ -1,4 +1,6 @@
 test_that("post file (with bin)", {
+  skip_on_os("windows")
+
   txtfile <- file_post(TXT, BIN)
   pngfile <- file_post(PNG, BIN)
 
@@ -8,6 +10,8 @@ test_that("post file (with bin)", {
 })
 
 test_that("post file (without bin)", {
+  skip_on_os("windows")
+
   txtfile <- file_post(TXT)
 
   expect_type(txtfile, "list")
@@ -15,6 +19,8 @@ test_that("post file (without bin)", {
 })
 
 test_that("post multiple files", {
+  skip_on_os("windows")
+
   files <- file_post(c(TXT, PNG), BIN)
 
   expect_type(files, "list")

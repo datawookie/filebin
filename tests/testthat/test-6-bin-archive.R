@@ -1,4 +1,6 @@
 test_that("delete bin", {
+  skip_on_os("windows")
+
   url <- file.path(base_url(), BIN)
 
   zipfile <- bin_archive(BIN, "zip")

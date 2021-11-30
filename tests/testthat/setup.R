@@ -20,6 +20,9 @@ if (require(stevedore)) {
   } else {
     message("Did not find local Filebin instance.")
   }
+} else {
+  message("Didn't find {stevedore}.")
+  LOCAL_FILEBIN <- FALSE
 }
 
 BIN <- bin_name_random()

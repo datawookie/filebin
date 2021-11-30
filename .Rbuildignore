@@ -3,5 +3,7 @@
 README.Rmd
 .github
 .bumpversion.cfg
+cran-comments.md
 \.html$
 ^data-raw$
+\.txt$

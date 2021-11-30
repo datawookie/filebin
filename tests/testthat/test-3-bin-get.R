@@ -1,4 +1,6 @@
 test_that("get bin: bin", {
+  skip_on_os("windows")
+
   bin <- bin_get(BIN)
 
   expect_equal(names(bin), c("bin", "files"))
@@ -7,6 +9,8 @@ test_that("get bin: bin", {
 })
 
 test_that("get bin: URL", {
+  skip_on_os("windows")
+
   url <- file.path(base_url(), BIN)
 
   bin <- bin_get(url)
