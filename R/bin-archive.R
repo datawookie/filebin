@@ -20,9 +20,8 @@ bin_archive <- function(bin, format = "zip", file = NA) {
 
   url <- file.path(base_url(), "archive", bin, format)
 
-  response <- httr::GET(
-    url,
-    accept_json()
+  response <- GET(
+    url
   )
 
   if (is.na(file)) {

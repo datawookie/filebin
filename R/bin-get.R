@@ -18,10 +18,7 @@ bin_get <- function(bin) {
     url <- file.path(base_url(), bin)
   }
 
-  response <- httr::GET(
-    url,
-    accept_json()
-  )
+  response <- GET(url)
 
   bin <- content(response)
 

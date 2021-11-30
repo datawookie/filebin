@@ -1,7 +1,26 @@
 library(stringi)
-library(httr)
 
-base_url("http://localhost:8080")
+# Check for local instance of Filebin.
+#
+if (require(stevedore)) {
+  message("Found {stevedore}.")
+
+  message("Creating Docker client.")
+  docker <- stevedore::docker_client(quiet = TRUE)
+  message("Done.")
+
+  message("Getting list of Docker containers.")
+  container_names <- unlist(docker$container$list()$names)
+
+  message("Checking for local Filebin instance.")
+  LOCAL_FILEBIN <- any(grepl("^filebin2", container_names))
+
+  if (LOCAL_FILEBIN) {
+    message("Found local Filebin instance.")
+  } else {
+    message("Did not find local Filebin instance.")
+  }
+}
 
 BIN <- bin_name_random()
 BIN_LOCK <- bin_name_random()

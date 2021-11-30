@@ -27,8 +27,5 @@ file_post(c(LOREM_IPSUM, MORE_LOREM_IPSUM))
 # Upload to a specific bin.
 bin <- bin_name_random(length = 24)
 file_post(LOREM_IPSUM, bin)
-
-# To get details of the HTTP request.
-httr::with_verbose(file_post(LOREM_IPSUM))
 }
 }

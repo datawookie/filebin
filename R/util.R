@@ -36,3 +36,11 @@ drop_cruft <- function(.data) {
     clean_names() %>%
     rename_at(vars(ends_with("_at")), ~ sub("_at$", "", .))
 }
+
+drop_null <- function(x) {
+  if (length(x)) {
+    x[!sapply(x, is.null)]
+  } else {
+    x
+  }
+}

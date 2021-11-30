@@ -14,10 +14,7 @@
 bin_qr_code <- function(bin, file = NA) {
   url <- file.path(base_url(), "qr", bin)
 
-  response <- httr::GET(
-    url,
-    accept_json()
-  )
+  response <- GET(url)
 
   if (is.na(file)) {
     file <- paste0(bin, ".png")                                 # nocov

@@ -18,10 +18,7 @@ bin_lock <- function(bin) {
     url <- file.path(base_url(), bin)
   }
 
-  response <- httr::PUT(
-    url,
-    accept_json()
-  )
+  response <- PUT(url)
 
   if (status_code(response) == 200) {
     TRUE

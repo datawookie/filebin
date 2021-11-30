@@ -58,11 +58,6 @@ Take a look at the result.
 description %>% select(filename, bin)
 ```
 
-    # A tibble: 1 × 2
-      filename    bin             
-      <chr>       <chr>           
-    1 DESCRIPTION e1ji0rlm6kb7dlsd
-
 Download a file using an URL.
 
 ``` r
@@ -85,6 +80,48 @@ Compare to original document.
 ``` r
 md5sum(c(DESCRIPTION_PATH, "description.txt"))
 ```
+
+## Local Filebin
+
+You can run a local instance of Filebin. First clone repository.
+
+``` bash
+# Clone with SSH.
+git clone git@github.com:espebra/filebin2.git
+# Clone with HTTPS.
+git clone https://github.com/espebra/filebin2.git
+```
+
+Change into `filebin2` directory.
+
+``` bash
+cd filebin2
+```
+
+Start the service.
+
+``` bash
+docker-compose up --build
+```
+
+The local Filebin instance will then be available at
+<http://localhost:8080/>. You can access the administrative interface at
+<http://admin:changeme@localhost:8080/admin>.
+
+To use the local Filebin instance with `{filebin}` just update the base
+URL.
+
+``` r
+base_url("http://localhost:8080")
+```
+
+To use the S3 backend you’ll need to set the following environment
+variables prior to launching the Docker containers:
+
+    export S3_ACCESS_KEY=
+    export S3_SECRET_KEY=
+    export S3_REGION=
+    export S3_BUCKET=
 
 ## API Endpoints
 

@@ -16,9 +16,6 @@
 #' # Upload to a specific bin.
 #' bin <- bin_name_random(length = 24)
 #' file_post(LOREM_IPSUM, bin)
-#'
-#' # To get details of the HTTP request.
-#' httr::with_verbose(file_post(LOREM_IPSUM))
 #' }
 file_post <- function(path, bin = NA) {
   if (is.na(bin)) bin <- bin_name_random()
@@ -30,16 +27,9 @@ file_post <- function(path, bin = NA) {
     filename <- basename(path)
     url <- file.path(base_url(), bin, filename)
 
-    headers = list(
-      "content-type" = "application/octet-stream"
-    )
-    headers <- do.call(add_headers, headers)
-
-    response <- httr::POST(
+    response <- POST(
       url,
-      headers,
-      body = upload_file(path),
-      accept_json()
+      body = upload_file(path)
     )
 
     if (status_code(response) == 201) {

@@ -7,5 +7,9 @@ test_that("set base URL", {
   expect_equal(base_url(base_url), base_url)
   expect_equal(base_url(), base_url)
 
-  base_url(original_base_url)
+  if (LOCAL_FILEBIN) {
+    base_url("http://localhost:8080")
+  } else {
+    base_url(original_base_url)
+  }
 })

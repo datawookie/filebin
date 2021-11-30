@@ -18,7 +18,7 @@ bin_delete <- function(bin) {
     url <- file.path(base_url(), bin)
   }
 
-  response <- httr::DELETE(url, accept_json())
+  response <- DELETE(url)
 
   if (status_code(response) == 200) {
     TRUE
