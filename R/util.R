@@ -44,3 +44,7 @@ drop_null <- function(x) {
     x
   }
 }
+
+stop_response <- function(response) {
+  stop(paste0(sub("\n$", "", content(response)), "."))
+}

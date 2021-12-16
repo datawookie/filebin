@@ -49,7 +49,7 @@ file_post <- function(path, bin = NA) {
           everything()) %>%
         drop_cruft()
     } else {
-      stop(paste0(content(response), "."))
+      stop_response(response)
     }
   }
 }
