@@ -23,6 +23,7 @@ Imports:
     tibble,
     tidyr
 Suggests:
+    reticulate,
     spelling,
     stevedore,
     testthat (>= 3.0.0),
