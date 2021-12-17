@@ -46,5 +46,5 @@ drop_null <- function(x) {
 }
 
 stop_response <- function(response) {
-  stop(paste0(sub("\n$", "", content(response)), "."))
+  stop(paste0(sub("\n$", "", content(response)), "."), call. = FALSE)
 }
