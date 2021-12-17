@@ -1,3 +1,5 @@
+skip_on_cran()
+
 test_that("set base URL", {
   original_base_url <- base_url()
   expect_equal(original_base_url, "https://filebin.net")

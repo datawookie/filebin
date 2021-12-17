@@ -1,3 +1,5 @@
+skip_on_cran()
+
 test_that("post file (with bin)", {
   skip_on_os("windows")
 

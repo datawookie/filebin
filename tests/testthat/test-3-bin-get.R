@@ -1,3 +1,5 @@
+skip_on_cran()
+
 test_that("get bin: bin", {
   skip_on_os("windows")
 

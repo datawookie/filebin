@@ -1,3 +1,5 @@
+skip_on_cran()
+
 test_that("lock bin: bin", {
   skip_on_os("windows")
 

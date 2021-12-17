@@ -1,3 +1,5 @@
+skip_on_cran()
+
 test_that("create QR code", {
   skip_on_os("windows")
 

@@ -1,3 +1,5 @@
+skip_on_cran()
+
 test_that("delete file: filename & bin", {
   skip_on_os("windows")
 
