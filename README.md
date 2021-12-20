@@ -13,13 +13,13 @@ coverage](https://img.shields.io/codecov/c/github/datawookie/filebin.svg)](https
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 <!-- badges: end -->
 
-[Filebin](https://filebin.net/) allows you to quickly & easily share
-files. Development of the software behind Filebin happens here:
+Filebin allows you to quickly & easily share files. Development of the
+software behind Filebin happens here:
 
 -   <https://github.com/espebra/filebin2> (current) and
 -   <https://github.com/espebra/filebin> (deprecated).
 
-This is an R wrapper for the [Filebin API](https://filebin.net/api).
+This is an R wrapper for the Filebin API.
 
 The documentation for `{filebin}` can be found
 [here](https://datawookie.github.io/filebin/).
@@ -80,48 +80,6 @@ Compare to original document.
 ``` r
 md5sum(c(DESCRIPTION_PATH, "description.txt"))
 ```
-
-## Local Filebin
-
-You can run a local instance of Filebin. First clone repository.
-
-``` bash
-# Clone with SSH.
-git clone git@github.com:espebra/filebin2.git
-# Clone with HTTPS.
-git clone https://github.com/espebra/filebin2.git
-```
-
-Change into `filebin2` directory.
-
-``` bash
-cd filebin2
-```
-
-Start the service.
-
-``` bash
-docker-compose up --build
-```
-
-The local Filebin instance will then be available at
-<http://localhost:8080/>. You can access the administrative interface at
-<http://admin:changeme@localhost:8080/admin>.
-
-To use the local Filebin instance with `{filebin}` just update the base
-URL.
-
-``` r
-base_url("http://localhost:8080")
-```
-
-To use the S3 backend you’ll need to set the following environment
-variables prior to launching the Docker containers:
-
-    export S3_ACCESS_KEY=
-    export S3_SECRET_KEY=
-    export S3_REGION=
-    export S3_BUCKET=
 
 ## API Endpoints
 
