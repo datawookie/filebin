@@ -10,6 +10,9 @@
     <loc>/index.html</loc>
   </url>
   <url>
+    <loc>/local-filebin.html</loc>
+  </url>
+  <url>
     <loc>/reference/base_url.html</loc>
   </url>
   <url>
