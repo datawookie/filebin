@@ -8,7 +8,7 @@ status](https://www.r-pkg.org/badges/version/filebin)](https://cran.r-project.or
 ![GitHub Actions build
 status](https://github.com/datawookie/filebin/actions/workflows/build.yaml/badge.svg)
 [![Codecov test
-coverage](https://img.shields.io/codecov/c/github/datawookie/filebin.svg)](https://codecov.io/github/datawookie/filebin)
+coverage](https://img.shields.io/codecov/c/github/datawookie/filebin.svg)](https://app.codecov.io/github/datawookie/filebin)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 <!-- badges: end -->
@@ -16,8 +16,8 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 Filebin allows you to quickly & easily share files. Development of the
 software behind Filebin happens here:
 
--   <https://github.com/espebra/filebin2> (current) and
--   <https://github.com/espebra/filebin> (deprecated).
+- <https://github.com/espebra/filebin2> (current) and
+- <https://github.com/espebra/filebin> (deprecated).
 
 This is an R wrapper for the Filebin API.
 
@@ -42,7 +42,7 @@ library(filebin)
 packageVersion("filebin")
 ```
 
-    [1] '0.0.5'
+    [1] '0.0.6'
 
 Upload a file to randomly named bin on Filebin.
 
@@ -85,15 +85,15 @@ md5sum(c(DESCRIPTION_PATH, "description.txt"))
 
 File endpoints:
 
--   [x] `GET /{bin}/{filename}`
--   [x] `DELETE /{bin}/{filename}`
--   [x] `POST /{bin}/{filename}`
+- [x] `GET /{bin}/{filename}`
+- [x] `DELETE /{bin}/{filename}`
+- [x] `POST /{bin}/{filename}`
 
 Bin endpoints:
 
--   [x] `GET /{bin}`
--   [x] `PUT /{bin}`
--   [x] `DELETE /{bin}`
--   [x] `GET /qr/{bin}`
--   [x] `GET /archive/{bin}/tar`
--   [x] `GET /archive/{bin}/zip`
+- [x] `GET /{bin}`
+- [x] `PUT /{bin}`
+- [x] `DELETE /{bin}`
+- [x] `GET /qr/{bin}`
+- [x] `GET /archive/{bin}/tar`
+- [x] `GET /archive/{bin}/zip`
