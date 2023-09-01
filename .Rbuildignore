@@ -8,3 +8,4 @@ local-filebin.md
 \.html$
 ^data-raw$
 \.txt$
+\.venv
