@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">filebin</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.5</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.6</span>
       </span>
     </div>
 
@@ -44,33 +44,38 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">file_post</span><span class="op">(</span><span class="va">path</span>, bin <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">file_post</span><span class="op">(</span><span class="va">path</span>, bin <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>path</dt>
 <dd><p>Path to a file. If a vector then upload multiple files.</p></dd>
+
+
 <dt>bin</dt>
 <dd><p>Bin name. If <code>NA</code> the generate random bin name.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A tibble.</p>
+    
+
+<p>A tibble.</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="co"># Upload a single file.</span></span>
-<span class="r-in"><span class="fu">file_post</span><span class="op">(</span><span class="va">LOREM_IPSUM</span><span class="op">)</span></span>
-<span class="r-in"><span class="co"># Upload multiple files.</span></span>
-<span class="r-in"><span class="fu">file_post</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">LOREM_IPSUM</span>, <span class="va">MORE_LOREM_IPSUM</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># Upload to a specific bin.</span></span>
-<span class="r-in"><span class="va">bin</span> <span class="op">&lt;-</span> <span class="fu"><a href="bin_name_random.html">bin_name_random</a></span><span class="op">(</span>length <span class="op">=</span> <span class="fl">24</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">file_post</span><span class="op">(</span><span class="va">LOREM_IPSUM</span>, <span class="va">bin</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="co"># Upload a single file.</span></span></span>
+<span class="r-in"><span><span class="fu">file_post</span><span class="op">(</span><span class="va">LOREM_IPSUM</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># Upload multiple files.</span></span></span>
+<span class="r-in"><span><span class="fu">file_post</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">LOREM_IPSUM</span>, <span class="va">MORE_LOREM_IPSUM</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Upload to a specific bin.</span></span></span>
+<span class="r-in"><span><span class="va">bin</span> <span class="op">&lt;-</span> <span class="fu"><a href="bin_name_random.html">bin_name_random</a></span><span class="op">(</span>length <span class="op">=</span> <span class="fl">24</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">file_post</span><span class="op">(</span><span class="va">LOREM_IPSUM</span>, <span class="va">bin</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -85,7 +90,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>
